@@ -1,0 +1,143 @@
+body h1{
+  text-align: center;
+  font-family: 'DIN';
+  margin-top: 30px;
+  font-size: 4.00rem;
+}
+
+.dropdown {
+  display: inline-block;
+}
+p {
+  padding: 1rem;
+}
+
+#app {
+  padding: 1rem;
+}
+
+/*Filters section*/
+.filter-section {
+  margin: 40px auto 0px;
+}
+/*Dropdown*/
+#dropdownMenuButton {
+  width:160px;
+  background-color: #1996af;
+  border: none;
+}
+.dropdown-label {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/*Products*/
+.products-panel {
+  margin: 30px 10%;
+}
+
+/*Card*/
+.card {
+  max-height: 500px;
+  width: 40%;
+}
+  .card .card-img {
+    width: 100%; 
+  }
+  .card .card-info {
+    display: inline-block;
+    text-align: center; 
+  }
+  .card .card-info .card-name {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+  .card .card-info .card-brand {
+    font-size: 1.00em;
+    font-weight: bold; 
+  }
+  .card .card-info .card-line > *{
+    display: inline-block;
+  }
+  .card .card-info .card-line *:first-child{
+    margin-right: 10px;
+  }
+  .card .card-info .card-line .card-price {
+    color: #222;
+  }
+  .card .card-info .card-line .card-rating {
+    font-size: 1.00em;
+  }
+  .card.grow-shadow {
+    -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+  }
+  .card.grow-shadow:hover {
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+        transform: scale(1.01);
+    -webkit-box-shadow: 0px 0px 10px 6px rgba(214,214,214,0.52);
+    -moz-box-shadow: 0px 0px 10px 6px rgba(214,214,214,0.52);
+    box-shadow: 0px 0px 10px 6px rgba(214,214,214,0.52);
+    z-index: 10;
+  }
+
+/*Modal*/
+.modal-product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  padding: 20px;
+  width: 50%;
+  height: 75%;
+  z-index: 20;
+}
+.modal-img {
+  /*position: absolute;*/
+  width: 30%; 
+  display:block;
+  margin:0 auto;
+}
+h2.modal-title {
+  text-align: center;
+}
+.modal-line {
+  text-align: center; 
+}
+.modal-line > *{
+  display: inline-block;
+}
+.modal-line *:first-child {
+  margin-right: 10px;
+}
+.modal-line .modal-price {
+  color: #222;
+  font-size: 1.25em;
+}
+.modal-line .modal-rating {
+  font-size: 1.25em;
+}
+.modal-description {
+  display: block;
+  font-size: 0.90em;
+  text-align: justify;
+  margin-top: 5px;
+  margin-bottom: 5%;
+  margin-left: 2.5%;
+  max-inline-size: 95%;
+}
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
+}

@@ -1,0 +1,57 @@
+[	
+	{
+        "id": 0,
+        "name": "All",
+		"category": "all"
+    },
+    {
+        "id": 1,
+        "name": "Blush",
+		"category": "blush"
+    },
+    {
+        "id": 2,
+        "name": "Bronzer",
+		"category": "bronzer"
+    },
+    {
+        "id": 3,
+        "name": "Eyebrow",
+		"category": "eyebrow"
+    },
+    {
+        "id": 4,
+        "name": "Eyeliner",
+		"category": "eyeliner"
+    },
+    {
+        "id": 5,
+        "name": "Eyeshadow",
+		"category": "eyeshadow"
+    },
+    {
+        "id": 6,
+        "name": "Foundation",
+		"category": "foundation"
+    },
+    {
+        "id": 7,
+        "name": "Lip liner",
+		"category": "lip_liner"
+    },
+    {
+        "id": 8,
+        "name": "Lipstick",
+		"category": "lipstick"
+    },
+    {
+        "id": 9,
+        "name": "Mascara",
+		"category": "mascara"
+    },
+    {
+        "id": 10,
+        "name": "Nail polish",
+		"category": "nail_polish"
+    }
+]

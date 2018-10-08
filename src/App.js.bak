@@ -1,0 +1,161 @@
+import React, { Component } from 'react';
+import axios from 'axios';
+import Dropdown from './Components/dropdown';
+import Products from './Components/products'
+import Pagination from './Components/Pagination'
+import './css/App.css';
+import './css/pagination.css';
+
+const Filters = (props) => {
+  return(
+      <div className="row">
+        <div className="col-6 text-center">
+          <Dropdown list={props.categoryList} type="category" currentPage={props.currentPage} onSelect={props.onSelect}/>
+        </div>  
+        <div className="col-6 text-center">
+          <Dropdown list={props.categoryList}/>
+        </div>
+      </div>
+      
+  );
+}
+
+let categoryList = [{id: 0, category: "pencil"},
+                    {id: 1, category: "Categoria 2"},
+                    {id: 2, category: "Categoria 3"}];
+
+const pageLimit = 16;
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      allProducts: [],
+      filteredProducts: [],
+      filter: undefined,
+      currentProducts: [],
+      currentPage: 1,
+      totalPages: null,
+      totalProducts: null
+    };
+  }
+
+  /* TEMPORARIAMENTE COMENTADO PARA IR BUSCAR O json LOCALMENTE
+  componentDidMount() {
+    axios.get("http://makeup-api.herokuapp.com/api/v1/products.json")
+      .then(
+        (result) => {
+          console.log(result.data);
+          this.setState({
+            isLoaded: true,
+            allProducts: result.data
+          });
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+  }
+  */
+  componentDidMount() {
+    console.log("getting Data...");
+    axios.get('../products.json')
+    .then(
+      (result) => {
+        //console.log("result: " + JSON.stringify(result.data, null, 4));
+        this.setState({
+          isLoaded: true,
+          allProducts: result.data,
+          filteredProducts: result.data,
+          currentProducts: result.data, //TODO:VERIFICAR SE AO FAZER ISTO SE NÃO É PRECISO METER TAMBÉM O CURRENTPAGE:1. O setState apenas altera estas propriedades ou é o estado de tudo???
+          totalProducts: (result.data).lenght
+        });
+    })
+      // Note: it's important to handle errors here
+      // instead of a catch() block so that we don't swallow
+      // exceptions from actual bugs in components.
+    .catch(error => {
+      console.log("error: " + error);
+      this.setState({
+        isLoaded: true,
+        error
+      });
+    })
+  }
+
+  onPageChanged = data => {
+    const { filteredProducts } = this.state;
+    const { currentPage, totalPages, pageLimit } = data;
+
+    const offset = (currentPage - 1) * pageLimit;
+    const currentProducts = filteredProducts.slice(offset, offset + pageLimit);
+    console.log("current products: " + currentProducts);
+    this.setState({ currentPage, currentProducts, totalPages });
+  };
+  
+  handleSelect = (selected, selectedtype, currentPage) => { /*TODO: A currentPage deveria estar no state, não devemos ter de passa-la por props*/
+    this.setState({filter: selected});
+    let filteredData = this.state.allProducts.filter(function(item) {
+      return item.category === selected; //TODO:CATEGORY AQUI ESTÁ HARDCODED, PODEMOS QUERER FILTRAR POR OUTRA KEY, DINAMICAMENTE
+    });
+    debugger;
+    /********TODO:é mesmo necessário? os valores daqui de dentro nao mudam...*/
+    let offset = (currentPage - 1) * pageLimit;
+    let currentProducts = filteredData.slice(offset, offset + pageLimit);
+    /***************************************/
+    this.setState({
+      filteredProducts: filteredData,
+      totalProducts: filteredData.lenght,
+      currentProducts: currentProducts
+    });
+    console.log(filteredData, selected);
+  }
+  
+  render() {
+    const {
+      filteredProducts,
+      currentProducts,
+      currentPage,
+      totalPages,
+      totalProducts
+    } = this.state;
+    //const totalProducts2 = filteredProducts.length;
+    if (totalProducts === 0) return null;
+
+    return (
+      <div className="app">
+        <h1>Makeup</h1>
+        <Filters categoryList={categoryList} currentPage={currentPage} onSelect={this.handleSelect}/> {/*TODO: tIRAR A CURRENTPAGE*/}
+        <Products products={this.state.currentProducts}/>
+        <div>
+            <div>
+              {currentPage && (
+                <span className="current-page">
+                  Page <span className="font-weight-bold">{currentPage}</span> /{" "}
+                  <span className="font-weight-bold">{totalPages}</span>
+                </span>
+              )}
+            </div>
+            <div>
+              <Pagination
+                totalRecords={totalProducts}
+                pageLimit={16}
+                pageNeighbours={1}
+                onPageChanged={this.onPageChanged}
+              />
+            </div>
+          </div>
+      </div>
+    );
+  }
+}
+
+export default App;

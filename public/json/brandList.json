@@ -1,0 +1,292 @@
+[
+	{
+        "id": 0,
+        "name": "All",
+		"category": "all"
+    },
+    {
+        "id": 1,
+		"name" : "Almay",
+        "category": "almay"
+    },
+    {
+        "id": 2,
+		"name" : "Alva",
+        "category": "alva"
+    },
+    {
+        "id": 3,
+		"name" : "Anna Sui",
+        "category": "anna sui"
+    },
+    {
+        "id": 4,
+		"name" : "Annabelle",
+        "category": "annabelle"
+    },
+    {
+        "id": 5,
+		"name" : "Benefit",
+        "category": "benefit"
+    },
+    {
+        "id": 6,
+		"name" : "Boosh",
+        "category": "boosh"
+    },
+    {
+        "id": 7,
+		"name" : "Burt's Bees",
+        "category": "burt's bees"
+    },
+    {
+        "id": 8,
+		"name" : "Butter London",
+        "category": "butter london"
+    },
+    {
+        "id": 9,
+		"name" : "C'est moi",
+        "category": "c'est moi"
+    },
+    {
+        "id": 10,
+		"name" : "Cargo cosmetics",
+        "category": "cargo cosmetics"
+    },
+    {
+        "id": 11,
+		"name" : "China Glaze",
+        "category": "china glaze"
+    },
+    {
+        "id": 12,
+		"name" : "Clinique",
+        "category": "clinique"
+    },
+    {
+        "id": 13,
+		"name" : "Coastal Classic Creation",
+        "category": "coastal classic creation"
+    },
+    {
+        "id": 14,
+		"name" : "Colourpop",
+        "category": "colourpop"
+    },
+    {
+        "id": 15,
+		"name" : "Covergirl",
+        "category": "covergirl"
+    },
+    {
+        "id": 16,
+		"name" : "Dalish",
+        "category": "dalish"
+    },
+    {
+        "id": 17,
+		"name" : "Deciem",
+        "category": "deciem"
+    },
+    {
+        "id": 18,
+		"name" : "Dior",
+        "category": "dior"
+    },
+    {
+        "id": 19,
+		"name" : "Dr. Hauschka",
+        "category": "dr. hauschka"
+    },
+    {
+        "id": 20,
+		"name" : "E.L.F.",
+        "category": "e.l.f."
+    },
+    {
+        "id": 21,
+		"name" : "Essie",
+        "category": "essie"
+    },
+    {
+        "id": 22,
+		"name" : "Fenty",
+        "category": "fenty"
+    },
+    {
+        "id": 23,
+		"name" : "Glossier",
+        "category": "glossier"
+    },
+    {
+        "id": 24,
+		"name" : "Green People",
+        "category": "green people"
+    },
+    {
+        "id": 25,
+		"name" : "Iman",
+        "category": "iman"
+    },
+    {
+        "id": 26,
+		"name" : "L'oreal",
+        "category": "l'oreal"
+    },
+    {
+        "id": 27,
+		"name" : "Lotus Cosmetics Usa",
+        "category": "lotus cosmetics usa"
+    },
+    {
+        "id": 28,
+		"name" : "Maia's Mineral Galaxy",
+        "category": "maia's mineral galaxy"
+    },
+    {
+        "id": 29,
+		"name" : "Marcelle",
+        "category": "marcelle"
+    },
+    {
+        "id": 30,
+		"name" : "Marienatie",
+        "category": "marienatie"
+    },
+    {
+        "id": 31,
+		"name" : "Maybelline",
+        "category": "maybelline"
+    },
+    {
+        "id": 32,
+		"name" : "Milani",
+        "category": "milani"
+    },
+    {
+        "id": 33,
+		"name" : "Mineral Fusion",
+        "category": "mineral fusion"
+    },
+    {
+        "id": 34,
+		"name" : "Misa",
+        "category": "misa"
+    },
+    {
+        "id": 35,
+		"name" : "Mistura",
+        "category": "mistura"
+    },
+    {
+        "id": 36,
+		"name" : "Moov",
+        "category": "moov"
+    },
+    {
+        "id": 37,
+		"name" : "Nudus",
+        "category": "nudus"
+    },
+    {
+        "id": 38,
+		"name" : "Nyx",
+        "category": "nyx"
+    },
+    {
+        "id": 39,
+		"name" : "Orly",
+        "category": "orly"
+    },
+    {
+        "id": 40,
+		"name" : "Pacifica",
+        "category": "pacifica"
+    },
+    {
+        "id": 41,
+		"name" : "Penny Lane Organics",
+        "category": "penny lane organics"
+    },
+    {
+        "id": 42,
+		"name" : "Physicians Formula",
+        "category": "physicians formula"
+    },
+    {
+        "id": 43,
+		"name" : "Piggy Paint",
+        "category": "piggy paint"
+    },
+    {
+        "id": 44,
+		"name" : "Pure Anada",
+        "category": "pure anada"
+    },
+    {
+        "id": 45,
+		"name" : "Rejuva Minerals",
+        "category": "rejuva minerals"
+    },
+    {
+        "id": 46,
+		"name" : "Revlon",
+        "category": "revlon"
+    },
+    {
+        "id": 47,
+		"name" : "Sally B's Skin Yummies",
+        "category": "sally b's skin yummies"
+    },
+    {
+        "id": 48,
+		"name" : "Salon Perfect",
+        "category": "salon perfect"
+    },
+    {
+        "id": 49,
+		"name" : "Sante",
+        "category": "sante"
+    },
+    {
+        "id": 50,
+		"name" : "Sinful Colours",
+        "category": "sinful colours"
+    },
+    {
+        "id": 51,
+		"name" : "Smashbox",
+        "category": "smashbox"
+    },
+    {
+        "id": 52,
+		"name" : "Stila",
+        "category": "stila"
+    },
+    {
+        "id": 53,
+		"name" : "Suncoat",
+        "category": "suncoat"
+    },
+    {
+        "id": 54,
+		"name" : "W3llpeople",
+        "category": "w3llpeople"
+    },
+    {
+        "id": 55,
+		"name" : "Wet N Wild",
+        "category": "wet n wild"
+    },
+    {
+        "id": 56,
+		"name" : "Zorah",
+        "category": "zorah"
+    },
+    {
+        "id": 57,
+		"name" : "Zorah Biocosmetiques",
+        "category": "zorah biocosmetiques"
+    }
+]
