@@ -11,13 +11,16 @@
   float: right;
 }
 .current-page {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     vertical-align: middle;
+    margin-bottom: 6px;
   }
 ul.pagination {
     margin-top: 0;
     margin-bottom: 0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
   }
   ul.pagination li.page-item.active a.page-link {
     color: #445565 !important;
@@ -32,7 +35,7 @@ ul.pagination {
     border-color: #ced4da !important;
     color: #6b88a4;
     font-weight: 900;
-    font-size: 1rem;
+    font-size: 1.0rem;
   }
   ul.pagination a.page-link:hover {
     background-color: #f4f4f4;

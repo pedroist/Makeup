@@ -1,6 +1,6 @@
 import React from 'react';
-import {DropdownButton} from 'react-bootstrap';
-import {MenuItem} from 'react-bootstrap';
+import { DropdownButton } from 'react-bootstrap';
+import { MenuItem } from 'react-bootstrap';
 
 class Dropdown extends React.Component {
   state = {
@@ -27,7 +27,7 @@ class Dropdown extends React.Component {
         </DropdownButton>
         <ul className={menuClass} aria-labelledby="dropdownMenuButton" >
           {this.props.list.map((item, i) =>
-            <MenuItem key={i} className="dropdown-item" onMouseDown={() => this.props.onSelect(item.category, this.props.type)} >{item.name}</MenuItem>  
+            <MenuItem key={i} className="dropdown-item" onMouseDown={() => this.props.onSelect(item.category, this.props.type)} >{item.name}</MenuItem>
           )}
         </ul>
       </div>

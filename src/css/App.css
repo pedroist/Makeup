@@ -8,6 +8,14 @@ body h1{
 .dropdown {
   display: inline-block;
 }
+
+.dropdown-menu {
+  width: -webkit-fill-available; 
+}
+
+.dropdown-item a {
+  color: #1996af;
+}
 p {
   padding: 1rem;
 }
@@ -18,17 +26,31 @@ p {
 
 /*Filters section*/
 .filter-section {
-  margin: 40px auto 0px;
+  margin: 110px auto 0px;
 }
 /*Dropdown*/
 #dropdownMenuButton {
   width:160px;
-  background-color: #1996af;
-  border: none;
+  background-color: white;
+  border-color: #1996af;
+  color: #1996af;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
 }
 .dropdown-label {
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .dropdown-label {
+    display: none; 
+  }
+
+  .dropdown-container {
+    margin: 5px auto;
+  }
 }
 
 /*Products*/
@@ -39,34 +61,46 @@ p {
 /*Card*/
 .card {
   max-height: 500px;
-  width: 40%;
 }
   .card .card-img {
-    width: 100%; 
+    width: 65%; 
+    margin: 0 auto;   
+  }
+
+  @media screen and (max-width: 767px) {
+    .card .card-img {
+      width: 40%; 
+    }
   }
   .card .card-info {
     display: inline-block;
     text-align: center; 
   }
   .card .card-info .card-name {
-    font-size: 1.25em;
+    font-size: 1.1em;
     font-weight: bold;
   }
   .card .card-info .card-brand {
-    font-size: 1.00em;
+    font-size: 0.9em;
     font-weight: bold; 
   }
   .card .card-info .card-line > *{
     display: inline-block;
   }
+
+  .card .card-info .card-line a{
+    font: 12px;
+  }
+
   .card .card-info .card-line *:first-child{
     margin-right: 10px;
   }
   .card .card-info .card-line .card-price {
     color: #222;
+    font-size: 14px;
   }
   .card .card-info .card-line .card-rating {
-    font-size: 1.00em;
+    font-size: 14px;
   }
   .card.grow-shadow {
     -webkit-transition: all .2s ease-in-out;
@@ -76,9 +110,9 @@ p {
     -webkit-transform: scale(1.01);
     -ms-transform: scale(1.01);
         transform: scale(1.01);
-    -webkit-box-shadow: 0px 0px 10px 6px rgba(214,214,214,0.52);
-    -moz-box-shadow: 0px 0px 10px 6px rgba(214,214,214,0.52);
-    box-shadow: 0px 0px 10px 6px rgba(214,214,214,0.52);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
     z-index: 10;
   }
 
